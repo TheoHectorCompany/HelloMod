@@ -1,5 +1,7 @@
 package com.thc.hellomod;
 
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -13,20 +15,25 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-@Mod(modid = "hellomod", version = "0.0.1")
+
+@Mod(modid = "hellomod", name = "Hello Mod", version = "1.7.10-0.0.1")
 public class hellomod
 {
+
+	@Mod.Instance("hellomod")
+	public static hellomod instance;
+
     public static Item champiHallu1;
 
-    @EventHandler
-    public void preinit(FMLPreInitializationEvent preInitEvent) 
+    @Mod.EventHandler
+    public void preInit(FMLPreInitializationEvent event)
     {
 	champiHallu1 = new ChampiHallu1();
 	GameRegistry.registerItem(champiHallu1, "champiHallu1");
     }
 
     
-    @EventHandler
+    @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
     	//recipes
@@ -55,4 +62,10 @@ public class hellomod
     	
     	GameRegistry.addSmelting(new ItemStack(Items.dye, 1, 1), new ItemStack(Items.dye, 1, 11), 0.1F);
     }
+
+	@Mod.EventHandler
+	public void postInit(FMLPostInitializationEvent event)
+	{
+
+	}
 }
