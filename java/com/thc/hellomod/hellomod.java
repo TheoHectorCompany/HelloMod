@@ -1,6 +1,8 @@
 package com.thc.hellomod;
 
 
+import com.thc.hellomod.proxy.IProxy;
+import cpw.mods.fml.common.SidedProxy;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -22,6 +24,10 @@ public class hellomod
 
     @Mod.Instance("hellomod")
     public static hellomod instance;
+
+	// Utile pour la communication entre serveur et client, notamment pour les GUIs
+	@SidedProxy(clientSide = "com.thc.hellomod.proxy.ClientProxy", serverSide = "com.thc.hellomod.proxy.ServerProxy")
+	public static IProxy proxy;
 
     /* 
      * Définition des nouveaux ITEMS 
