@@ -17,11 +17,15 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 @Mod(modid = "Hello Mod", version = "0.0.1")
 public class hellomod
 {
+    public static Item champiHallu1;
+
     @EventHandler
-    public void preinit(FMLPreInitializationEvent event)
+    public void preinit(FMLPreInitializationEvent preInitEvent) 
     {
-    
+	champiHallu1 = new ChampiHallu1();
+	GameRegistry.registerItem(champiHallu1, "champiHallu1");
     }
+
     
     @EventHandler
     public void init(FMLInitializationEvent event)
