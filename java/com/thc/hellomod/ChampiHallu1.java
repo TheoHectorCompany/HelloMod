@@ -8,7 +8,7 @@ public class ChampiHallu1 extends Item
     {
 	setMaxStackSize(12);
 	setCreativeTab(CreativeTabs.tabMisc);
-	setUnlocalizedName("ChampignonHallu1");
+	setUnlocalizedName("ChampiHallu1");
     }
     
 }
