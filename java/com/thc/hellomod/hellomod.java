@@ -23,20 +23,51 @@ public class hellomod
     @Mod.Instance("hellomod")
     public static hellomod instance;
 
+    /* 
+     * Définition des nouveaux ITEMS 
+     */
+
     public static Item champiHallu1;
 
+
+    /*
+     * Définition des nouveaux BLOCKS
+     */
+
+
+
+    /*
+     * Méthode preInit
+     */
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+	/*
+	 * Enregistrement des nouveaux ITEMS
+	 */
+
 	champiHallu1 = new ChampiHallu1();
 	GameRegistry.registerItem(champiHallu1, "champiHallu1");
+
+
+	/*
+	 * Enregistrement des nouveaux BLOCKS
+	 */
+	
     }
 
-    
+
+    /*
+     * Méthode init
+     */
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-    	//recipes
+    	/*
+	 * Définition des nouvelles RECETTES
+	 */
+
+	// Recettes ordonnées
     	GameRegistry.addRecipe(new ItemStack(Blocks.obsidian), new Object[]{
     		"AAA",
     		"AAA",
@@ -55,17 +86,23 @@ public class hellomod
     		'A', Items.cookie, 'B', Blocks.dirt, 'C', new ItemStack(Items.dye, 1, 1)
     	});
     	
+	// Recette désordonées
     	GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 2, 1), new Object[]
     	{
     		new ItemStack(Items.dye, 1, 1), Items.redstone
     	});
     	
+	// Recette de fonte
     	GameRegistry.addSmelting(new ItemStack(Items.dye, 1, 1), new ItemStack(Items.dye, 1, 11), 0.1F);
     }
+    
 
-	@Mod.EventHandler
-	public void postInit(FMLPostInitializationEvent event)
-	{
-
-	}
+    /*
+     * Méthode postInit
+     */
+    @Mod.EventHandler
+    public void postInit(FMLPostInitializationEvent event)
+    {
+	
+    }
 }
