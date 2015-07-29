@@ -1,6 +1,6 @@
 [
 {
-  "modid": "hellomod",
+  "modid": "Hello Mod",
   "name": "Hello Mod",
   "description": "Un mod rocambolesque au retentissements intersidéraux.",
   "version": "${version}",
