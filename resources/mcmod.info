@@ -1,0 +1,16 @@
+[
+{
+  "modid": "hellomod",
+  "name": "Hello Mod",
+  "description": "Un mod rocambolesque au retentissements intersidéraux.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "http://www.perdu.com",
+  "updateUrl": "not yet",
+  "authorList": ["Jacquin (root) Théo", "Lezin (sir) Hector"], 
+  "credits": "THC Company",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
