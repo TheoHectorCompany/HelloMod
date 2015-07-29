@@ -25,9 +25,9 @@ public class hellomod
     @Mod.Instance("hellomod")
     public static hellomod instance;
 
-	// Utile pour la communication entre serveur et client, notamment pour les GUIs
-	@SidedProxy(clientSide = "com.thc.hellomod.proxy.ClientProxy", serverSide = "com.thc.hellomod.proxy.ServerProxy")
-	public static IProxy proxy;
+    // Utile pour la communication entre serveur et client, notamment pour les GUIs
+    @SidedProxy(clientSide = "com.thc.hellomod.proxy.ClientProxy", serverSide = "com.thc.hellomod.proxy.ServerProxy")
+    public static IProxy proxy;
 
     /* 
      * Définition des nouveaux ITEMS 
