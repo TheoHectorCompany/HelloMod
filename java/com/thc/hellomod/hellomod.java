@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-@Mod(modid = "Hello Mod", version = "0.0.1")
+@Mod(modid = "hellomod", version = "0.0.1")
 public class hellomod
 {
     public static Item champiHallu1;
