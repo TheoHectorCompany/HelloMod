@@ -1,7 +1,6 @@
 package com.thc.hellomod;
 
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -13,6 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
@@ -20,8 +20,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class hellomod
 {
 
-	@Mod.Instance("hellomod")
-	public static hellomod instance;
+    @Mod.Instance("hellomod")
+    public static hellomod instance;
 
     public static Item champiHallu1;
 
