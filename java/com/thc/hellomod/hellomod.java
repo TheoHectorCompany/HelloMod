@@ -1,6 +1,5 @@
 package com.thc.hellomod;
 
-#Hector lezin sucks dicks in hell
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
