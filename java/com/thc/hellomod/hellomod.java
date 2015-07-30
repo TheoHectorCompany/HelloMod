@@ -1,32 +1,28 @@
 package com.thc.hellomod;
 
-
-import com.thc.hellomod.proxy.IProxy;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.SidedProxy;
-import net.minecraft.block.Block;
+import com.thc.hellomod.proxy.IProxy;
+import com.thc.hellomod.reference.Reference;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 
-@Mod(modid = "hellomod", name = "Hello Mod", version = "1.7.10-0.0.1")
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class hellomod
 {
 
-    @Mod.Instance("hellomod")
+    @Mod.Instance(Reference.MOD_ID)
     public static hellomod instance;
 
 	// Utile pour la communication entre serveur et client, notamment pour les GUIs
-	@SidedProxy(clientSide = "com.thc.hellomod.proxy.ClientProxy", serverSide = "com.thc.hellomod.proxy.ServerProxy")
+	@SidedProxy(clientSide = Reference.CLIENT_SIDED_PROXY, serverSide = Reference.SERVER_SIDED_PROXY)
 	public static IProxy proxy;
 
     /* 
