@@ -9,6 +9,7 @@ public class ChampiHallu1 extends Item
 	setMaxStackSize(12);
 	setCreativeTab(CreativeTabs.tabMisc);
 	setUnlocalizedName("ChampiHallu1");
+	setTextureName("hellomod:ChampiHallu1");
     }
     
 }
